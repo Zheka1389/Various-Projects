@@ -1,0 +1,27 @@
+using System;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] r = new int[] { 4, 2, 3};
+            int s = Bsearch(r, 3, 3,4,5.3);
+            Console.WriteLine(s);
+        }
+        static int Bsearch(int[] mas, int x, params dynamic[] integer)
+        {
+            int index = 0;
+            for(int i = 0; i < mas.Length; i++)
+            {
+                if (mas[i] < x)
+                {
+                    index = i;
+                    break;
+                }      
+            }
+            return index;
+        }
+    }
+}
